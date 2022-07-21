@@ -29,13 +29,34 @@ function addEmployee(){
     <td>${idNum}</td>
     <td>${title}</td>
     <td>${salary}</td>
-    <td><button class="delete place${placeInArray}">Delete</button></td>
+    <td><button class="delete ${placeInArray}">Delete</button></td>
     </tr>
     `)
     placeInArray++;
+
+    $('.fname').val('');
+    $('.lname').val('');
+    $('.idNum').val('');
+    $('.title').val('');
+    $('.salary').val('');
+
+    calcMonthTotal(totalComp);
 }
 
 
 function removeEmployee(){
+    console.log(this.class);
     $(this).closest('tr').remove();
+
+    //array.splice(5, 1);
+}
+
+function calcMonthTotal(array){
+    $('.monthCost').empty();
+    let monthTotal = 0;
+    for( let i=0; i<array.length; i++ ){
+        let costNum = Number(array[i]);
+        monthTotal += costNum;
+    }
+    $('.monthCost').append(monthTotal);
 }
