@@ -1,0 +1,30 @@
+body {
+    background-color: gray;
+    text-align: center;
+}
+
+.heading {
+    color: #fff;
+}
+
+.input-header {
+    text-align: left;
+    color: #fff;
+}
+
+.salary-table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th {
+    width: 16%;
+    border: 1px solid black;
+}
+
+td {
+    width: 16%;
+    border: 1px solid black;
+}
