@@ -10,9 +10,10 @@ function onReady(){
 }
 
 let totalComp = [];
-let placeInArray = 0;
+let uniqNum = 0;
 
 function addEmployee(){
+
     let fName = $('.fname').val()
     let lName = $('.lname').val()
     let idNum = $('.idNum').val()
@@ -28,11 +29,11 @@ function addEmployee(){
     <td>${lName}</td>
     <td>${idNum}</td>
     <td>${title}</td>
-    <td>${salary}</td>
-    <td><button class="delete ${placeInArray}">Delete</button></td>
+    <td class"salary">${salary}</td>
+    <td><button class="delete" id="${salary}">Delete</button></td>
     </tr>
     `)
-    placeInArray++;
+    uniqNum++;
 
     $('.fname').val('');
     $('.lname').val('');
@@ -45,10 +46,16 @@ function addEmployee(){
 
 
 function removeEmployee(){
-    console.log(this.class);
+
     $(this).closest('tr').remove();
 
-    //array.splice(5, 1);
+    const index = totalComp.indexOf(this.id);
+
+    if (index > -1) {
+        totalComp.splice(index, 1);
+    }
+    calcMonthTotal(totalComp);
+
 }
 
 function calcMonthTotal(array){
@@ -56,7 +63,7 @@ function calcMonthTotal(array){
     let monthTotal = 0;
     for( let i=0; i<array.length; i++ ){
         let costNum = Number(array[i]);
-        monthTotal += costNum;
+        monthTotal += (costNum / 12);
     }
     $('.monthCost').append(monthTotal);
 }
