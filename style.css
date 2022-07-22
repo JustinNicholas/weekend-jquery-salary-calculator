@@ -1,32 +1,73 @@
 body {
-    background-color: gray;
+    position: relative;
+    background-color: #fbfbfb;
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .heading {
-    color: #fff;
+    color: #222222;
+    background-color: #fff;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .input-header {
-    text-align: left;
-    color: #fff;
+    position: relative;
+    right: 33%;
+    color: black;
+}
+
+.inputs {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    background-color: deepskyblue;
+}
+
+input {
+    width: 14%;
+    height: 1.2rem;
 }
 
 .salary-table {
-    width: 100%;
+    width: 95%;
     border: 1px solid black;
     border-collapse: collapse;
     margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 th {
+    font-weight: 800;
+    color: #222222;
     width: 16%;
     border: 1px solid black;
 }
 
 td {
+    font-size: 1.2rem;
     width: 16%;
     border: 1px solid black;
+}
+
+.total-cost {
+    font-weight: 400;
+}
+
+.cost-foot {
+    width: 30%;
+    position: relative;
+    left: 70%;
+}
+
+.monthCost {
+    font-weight: 800;
 }
 
 .too-high {

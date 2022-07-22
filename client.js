@@ -6,7 +6,7 @@ function onReady(){
     $('.salary-table').on('click', '.delete', removeEmployee)
 }
 
-// this array will hold all salries to be calculate the total
+// this array will hold all salaries to be calculate the total
 let totalComp = [];
 
 // this function function takes in inputs, calls a function to add them to the DOM, clears the input categories, and adds salary to array.
@@ -21,7 +21,7 @@ function addEmployee(){
 
     // checks if any of the inputs are blank when submit button is clicked and send alert if any blanks
     if( fName == '' || lName == '' || idNum == '' || title == '' || salary == '' ){
-        alert('Please fill out all feilds before submitting');
+        alert('Please fill out all fields before submitting');
     } else {
 
     // push salary of new emplyoee to totalComp array
@@ -81,14 +81,14 @@ function calcMonthTotal(array){
     }
     // display monthly cost on DOM and checks if total cost is less than $20,000
     if ( monthTotal < 20000 ) {
-    // append monthy cost to DOM
-    $('.monthCost').append(monthTotal);
-    // remove red background if cost is less than $20,000
-    $('.total-cost').removeClass('too-high');
+        // append monthy cost to DOM
+        $('.monthCost').append(monthTotal);
+        // remove red background if cost is less than $20,000
+        $('.total-cost').removeClass('too-high');
     } else {
-    // append monthy cost to DOM
-    $('.monthCost').append(monthTotal);
-    // add red background if cost is greater than $20,000
-    $('.total-cost').addClass('too-high');
+        // append monthy cost to DOM
+        $('.monthCost').append(monthTotal);
+        // add red background if cost is greater than $20,000
+        $('.total-cost').addClass('too-high');
     }
 }
